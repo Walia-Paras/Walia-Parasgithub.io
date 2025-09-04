@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paras</title>
+    <h1>Hello World</h1>
+</head>
+<body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Paras — Nano Robotics & Mechatronics Portfolio</title>
+  <style>
+    :root{
+      --bg:#070712;
+      --panel:#0f1620;
+      --accent:#00f0d6; /* cyan */
+      --accent2:#ff4d9e; /* magenta */
+      --muted:#9aa6b2;
+      --glass: rgba(255,255,255,0.03);
+      --card: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background: radial-gradient(1000px 600px at 10% 10%, rgba(0,240,214,0.04), transparent),
+             radial-gradient(800px 500px at 90% 90%, rgba(255,77,158,0.03), transparent),
+             var(--bg); color:#e6eef3; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px;
+    }
+    .container{max-width:1100px;margin:0 auto}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+      display:grid;place-items:center;font-weight:700;color:#041018;box-shadow:0 6px 20px rgba(0,0,0,0.6);
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+    nav a:hover{color:var(--accent)}
+
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-bottom:36px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:28px;border-radius:14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+    .hero h1{font-size:34px;margin:0}
+    .hero p.lead{color:var(--muted);margin-top:8px}
+    .cta{margin-top:16px}
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#041018;font-weight:700;text-decoration:none;
+    }
+
+    /* robot card */
+    .robot-card{background:var(--panel);padding:20px;border-radius:12px;display:grid;place-items:center}
+    svg{max-width:100%;height:auto}
+
+    section{margin-bottom:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--glass);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px 0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* projects */
+    .project-card{position:relative;overflow:hidden;border-radius:12px;padding:18px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .project-card h4{margin-top:0}
+    .project-meta{font-size:13px;color:var(--muted)}
+    .timeline{font-size:13px;color:var(--muted);margin-top:10px}
+
+    footer{color:var(--muted);font-size:14px;text-align:center;padding:18px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      nav{display:none}
+    }
+
+    /* subtle circuit lines background */
+    .circuit{
+      position:absolute;inset:0;pointer-events:none;opacity:0.06;background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+      background-size: 60px 60px, 60px 60px;
+      border-radius:14px;
+    }
+
+    /* small animations */
+    .pulse{animation:pulse 2.2s infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.02)}100%{transform:scale(1)}}
+
+    /* contact form (non-functional) */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.35)}
+    .note{color:var(--muted);font-size:13px}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">P</div>
+        <div>
+          <div style="font-weight:700">Paras</div>
+          <div style="font-size:13px;color:var(--muted)">Nano Robotics · Mechatronics · RC Systems</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="hero">
+        <div>
+          <h1>Hi — I'm Paras</h1>
+          <p class="lead">A mechatronics student passionate about nano-robotics, RC vehicles and building practical systems. I like sports, esports and learning new technologies.</p>
+          <div class="cta">
+            <a class="btn" href="#projects">See Projects</a>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <div class="card" style="min-width:160px">
+              <div style="font-size:12px;color:var(--muted)">Education</div>
+              <div style="font-weight:700">Dhruv Public School — 12th</div>
+            </div>
+            <div class="card" style="min-width:160px">
+              <div style="font-size:12px;color:var(--muted)">Interests</div>
+              <div style="font-weight:700">Nano Robotics • Mechatronics • RC Vehicles</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="robot-card">
+          <!-- Inline SVG nanobot illustration (no external assets) -->
+          <svg width="320" height="320" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#00f0d6" />
+                <stop offset="100%" stop-color="#ff4d9e" />
+              </linearGradient>
+            </defs>
+            <rect x="6" y="6" width="188" height="188" rx="14" fill="#071018" stroke="url(#g1)" stroke-opacity="0.9" stroke-width="0.8"/>
+
+            <!-- central core -->
+            <g transform="translate(100,100)">
+              <circle r="28" fill="#071724" stroke="url(#g1)" stroke-width="1.8"/>
+              <circle r="16" fill="#041018" stroke="#042a26" stroke-width="0.6"/>
+
+              <!-- antenna -->
+              <line x1="0" y1="-28" x2="0" y2="-56" stroke="#00f0d6" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="0" cy="-62" r="4" fill="#ff4d9e"/>
+
+              <!-- legs / connectors -->
+              <g stroke="#00f0d6" stroke-width="1.2">
+                <line x1="-26" y1="-6" x2="-64" y2="-40" />
+                <line x1="26" y1="-6" x2="64" y2="-40" />
+                <line x1="-28" y1="14" x2="-64" y2="40" />
+                <line x1="28" y1="14" x2="64" y2="40" />
+              </g>
+
+              <!-- inner ring lines -->
+              <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+                <circle r="44" fill="none"/>
+                <path d="M-44 0 H-24"/>
+                <path d="M44 0 H24"/>
+              </g>
+            </g>
+
+            <!-- corner circuit traces -->
+            <path d="M20 160 L40 140 L60 140" stroke="#00f0d6" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <path d="M180 40 L160 20 L140 20" stroke="#ff4d9e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+          </svg>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="card">
+          <h3>About me</h3>
+          <p>I passed 12th from Dhruv Public School. I enjoy building and testing electronics and mechanical systems — particularly small-scale robotics and RC vehicles. I've completed multiple projects (RC car, sensor systems, microcontroller-based automations) and I'm learning advanced topics in mechatronics and nano-robotics.</p>
+          <div class="tags" style="margin-top:12px">
+            <span class="tag">Sports & Esports</span>
+            <span class="tag">Team Player</span>
+            <span class="tag">C / C++ / Python</span>
+            <span class="tag">CAD & 3D Modeling</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 style="margin-bottom:12px">Projects</h2>
+        <div class="grid-3">
+          <article class="project-card">
+            <h4>RC Car — 3D CAD + Control</h4>
+            <div class="project-meta">Design, PCB integration, motor control, and chassis CAD modelling.</div>
+            <div class="timeline">Tools: Arduino / STM32, CAD (Fusion 360), Li-ion battery management</div>
+            <p style="margin-top:10px;color:var(--muted)">Built a lightweight RC car platform with separate ESC, steering servo, and a Li-ion battery pack. Tuned PID steering control and telemetry logging.</p>
+          </article>
+
+          <article class="project-card">
+            <h4>Micro-Mouse / Nano Bot Prototype</h4>
+            <div class="project-meta">Small autonomous robot for obstacle avoidance and path following.</div>
+            <div class="timeline">Tools: Microcontrollers, IR & ultrasonic sensors, custom PCB</div>
+            <p style="margin-top:10px;color:var(--muted)">Prototype focused on size reduction and efficient power use — applied sensor fusion for improved navigation.</p>
+          </article>
+
+          <article class="project-card">
+            <h4>IoT Sensor Suite (Learning Project)</h4>
+            <div class="project-meta">Data acquisition and local visualization (offline demo).</div>
+            <div class="timeline">Tools: Python scripts, ADC interfacing, serial comms</div>
+            <p style="margin-top:10px;color:var(--muted)">Collected sensor data from temperature, vibration and current sensors to analyze performance of small motors.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="grid-3">
+          <div class="card">
+            <h3>Technical Skills</h3>
+            <ul style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>C, C++ & Python</li>
+              <li>Microcontrollers: Arduino, STM32</li>
+              <li>PCB basics, soldering, sensors</li>
+              <li>3D CAD (Fusion 360), basic CAM</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Mechatronics Interests</h3>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">Nano Robotics</span>
+              <span class="tag">Embedded Systems</span>
+              <span class="tag">Motor Control</span>
+              <span class="tag">Sensor Fusion</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Soft Skills</h3>
+            <p style="color:var(--muted);margin:0">Teamwork · Problem Solving · Quick Learner · Presentation</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="note">This template contains a non-functional contact form (no external services). Replace with your email or host the form when you are ready.</p>
+          <form action="#" onsubmit="event.preventDefault();alert('This form is a placeholder — replace action to send messages.');">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+            <textarea rows="5" placeholder="Message (project inquiry, collab)" required></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn" type="submit">Send (demo)</button>
+              <div style="color:var(--muted);font-size:13px">Or keep this page downloadable as a PDF to share.</div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="position:relative;max-width:1100px;margin:18px auto 0;padding:8px 0">Made with ♥ for Nano Robotics & Mechatronics — Paras</div>
+    </footer>
+  </div>
+</body>
+</html>
+    
+
+    
+    
+</body>
+</html>
